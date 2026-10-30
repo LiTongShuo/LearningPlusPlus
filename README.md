@@ -1,5 +1,7 @@
 # LearningPlusPlus
 
+中文 | [English](README.en.md)
+
 [![CMake Verification](https://github.com/LiTongShuo-edu/LearningPlusPlus/actions/workflows/cmake.yml/badge.svg)](https://github.com/LiTongShuo-edu/LearningPlusPlus/actions/workflows/cmake.yml)
 
 这是一个 C++ 基础学习作品集，收录个人早期练习、丢失练习的复现代码，以及围绕指针、内存和结果统计补充的扩展示例。代码统一放在 [`代码案例/`](./代码案例/) 中，目录名称直接标明来源，避免将保留的早期手写练习、丢失后复现的练习和后续新增示例混为一谈。
