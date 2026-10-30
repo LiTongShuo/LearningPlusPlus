@@ -1,63 +1,58 @@
 # LearningPlusPlus
 
-中文 | [English](README.en.md)
+English | [中文](README.zh-CN.md)
 
 [![CMake Verification](https://github.com/LiTongShuo-edu/LearningPlusPlus/actions/workflows/cmake.yml/badge.svg)](https://github.com/LiTongShuo-edu/LearningPlusPlus/actions/workflows/cmake.yml)
 
-这是一个 C++ 基础学习作品集，收录个人早期练习、丢失练习的复现代码，以及围绕指针、内存和结果统计补充的扩展示例。代码统一放在 [`代码案例/`](./代码案例/) 中，目录名称直接标明来源，避免将保留的早期手写练习、丢失后复现的练习和后续新增示例混为一谈。
+A C++ fundamentals learning portfolio containing early personal exercises, recreations of lost exercises, and later examples focused on pointers, memory, and test-result statistics. Code is organized under [`代码案例/`](./代码案例/), with directory names distinguishing retained handwritten work, recreated exercises, and later additions.
 
-## 项目导航
+## Project navigation
 
-| 主题 | 查看内容 | 说明 |
+| Topic | Where to look | Details |
 | --- | --- | --- |
-| 指针、引用与动态内存 | [`代码案例/指针与引用^`](./代码案例/指针与引用^) 与 [`代码案例/内存管理^`](./代码案例/内存管理^) | 后续新增的基础机制示例，包含自动测试 |
-| 结果统计与验证记录 | [`代码案例/案例-测试结果统计^`](./代码案例/案例-测试结果统计^) 与 [`docs/调试与验证说明.md`](./docs/调试与验证说明.md) | 展示通过率汇总、失败项保留与测试运行方式 |
-| 构建与自动测试 | [`CMakeLists.txt`](./CMakeLists.txt) 与 [GitHub Actions](https://github.com/LiTongShuo-edu/LearningPlusPlus/actions) | 在 Windows / MSVC 环境构建并运行 CTest |
-| 代码来源与 AI 协作说明 | [`docs/参考边界与原创声明.md`](./docs/参考边界与原创声明.md) 与 [`docs/AI协作开发记录.md`](./docs/AI协作开发记录.md) | 区分手写旧作、AI 协作复现与后续扩展示例 |
+| Pointers, references, and dynamic memory | [`代码案例/指针与引用^`](./代码案例/指针与引用^) and [`代码案例/内存管理^`](./代码案例/内存管理^) | Later fundamentals examples with automated tests |
+| Test statistics and verification | [`代码案例/案例-测试结果统计^`](./代码案例/案例-测试结果统计^) and [debugging and verification notes](./docs/调试与验证说明.md) | Pass-rate summaries, retained failures, and test instructions |
+| Build and automated tests | [`CMakeLists.txt`](./CMakeLists.txt) and [GitHub Actions](https://github.com/LiTongShuo-edu/LearningPlusPlus/actions) | Windows / MSVC build and CTest |
+| Sources and AI collaboration | [source boundaries and originality](./docs/参考边界与原创声明.md) and [AI collaboration record](./docs/AI协作开发记录.md) | Distinguishes handwritten work, AI-assisted recreations, and later examples |
 
-**当前验证结果：**13 个 `＊` 复现案例与 3 个 `^` 扩展示例构建成功、16/16 项自动测试通过；34 份早期手写旧作独立编译均通过，其中一处缺失闭合大括号的编译 bug 已在 Codex 协助下修复。
+**Recorded verification:** 13 recreated `＊` cases and three `^` extensions built successfully, with 16/16 automated tests passing. All 34 early handwritten programs compiled independently after one missing closing brace was fixed with Codex assistance.
 
-## 代码来源背景
+## Background and source labels
 
-这些早期练习代码是本人于 2019 至 2020 年在旧电脑上编写的教学练习。其中一部分曾上传到个人 OneDrive 网盘并得以保留，另一部分随旧电脑报废而遗失。仓库中无后缀目录收录仍保留的手写源码；名称末尾为 `＊` 的目录用于标明在 Codex 协助下重新复现的遗失练习代码。
+The early exercises were written by the author in 2019–2020 on an old computer. Some survived on a personal OneDrive account; others were lost when the computer failed. Directories without a suffix contain retained handwritten source. A full-width `＊` identifies lost exercises recreated with Codex assistance; `^` identifies later examples developed with Codex assistance.
 
-## 来源标识
-
-| 目录命名 | 含义 | 发布处理 |
+| Directory suffix | Meaning | Publication treatment |
 | --- | --- | --- |
-| 无后缀 | 本人早期手写练习 | 以原始内容为基准整理；一处编译 bug 已在 Codex 协助下修复 |
-| 名称末尾为 `＊` | 本人丢失的部分练习代码，在 Codex 协助下重新复现 | 代码为重新复现的公开版本，不包含讲义成品源码 |
-| 名称末尾为 `^` | 后续补充设计的 Codex 协作扩展示例 | 不对应课程成品，围绕指针、内存和测试结果整理 |
+| None | Retained early handwritten exercises | Organized from originals; one compilation bug was fixed with Codex assistance |
+| `＊` | Recreated lost exercises | Recreated public implementations; no finished course source is included |
+| `^` | Later collaborative extensions | Additional exercises on pointers, memory, and test results |
 
-`＊` 是全角星号。Windows 文件名不能使用半角 `*`，因此采用可存储、可提交的全角字符作为标识。`＊` 复现代码与 `^` 新增代码均包含 AI 编程协作；只有无后缀源码作为仍保留的早期手写代码发布。
+The full-width star is used because Windows filenames cannot contain the ASCII `*`. Both `＊` and `^` sources involved AI programming collaboration; only unsuffixed sources are published as retained early handwritten code.
 
-## 内容导航
+## Contents
 
-| 学习阶段 | 案例目录 | 覆盖主题 |
+| Stage | Example directories | Topics |
 | --- | --- | --- |
-| 早期手写基础 | `HelloWorld`、基础数据类型、运算、分支、循环及早期小案例等共 34 项 | 基础语法与控制流程 |
-| 丢失基础练习复现 | `案例-五只小猪称体重＊`、`案例-数组元素逆置＊`、`冒泡排序＊`、`案例-考试成绩统计＊`、`案例-教师与学生信息＊`、`案例-英雄年龄排序＊` | 数组、简单算法与结构体 |
-| 丢失阶段 2 练习复现 | `案例-通讯录管理系统＊` | 控制台菜单与内存中的增删改查 |
-| 丢失阶段 3 练习复现 | `案例-立方体类＊`、`案例-点和圆的关系＊`、`案例-多态计算器＊`、`案例-制作饮品＊`、`案例-电脑组装＊` | 类、组合、继承与多态 |
-| 丢失阶段 4 练习复现 | `案例-职工管理系统＊` | 多态职工类型、文件读写、增删改查与排序 |
-| 后续扩展示例 | `指针与引用^`、`内存管理^`、`案例-测试结果统计^` | 指针/引用、动态内存、测试记录汇总 |
+| Early handwritten basics | `HelloWorld`, basic types, operators, branching, loops, and other early examples (34 total) | Syntax and control flow |
+| Recreated basics | `案例-五只小猪称体重＊`, `案例-数组元素逆置＊`, `冒泡排序＊`, `案例-考试成绩统计＊`, `案例-教师与学生信息＊`, `案例-英雄年龄排序＊` | Arrays, simple algorithms, structures |
+| Recreated stage 2 | `案例-通讯录管理系统＊` | Console menus and in-memory CRUD |
+| Recreated stage 3 | `案例-立方体类＊`, `案例-点和圆的关系＊`, `案例-多态计算器＊`, `案例-制作饮品＊`, `案例-电脑组装＊` | Classes, composition, inheritance, polymorphism |
+| Recreated stage 4 | `案例-职工管理系统＊` | Polymorphic employee types, file I/O, CRUD, sorting |
+| Later extensions | `指针与引用^`, `内存管理^`, `案例-测试结果统计^` | Pointers, references, dynamic memory, test summaries |
 
-更多说明：
+Further documentation:
 
-- [`docs/学习路线与知识点.md`](./docs/学习路线与知识点.md)：源码与知识点映射。
-- [`docs/调试与验证说明.md`](./docs/调试与验证说明.md)：构建、运行和验证记录。
-- [`docs/AI协作开发记录.md`](./docs/AI协作开发记录.md)：AI 辅助开发的任务拆解、迭代案例和验收边界。
-- [`docs/手写旧作编译记录.md`](./docs/手写旧作编译记录.md)：34 份早期源码的客观编译结果。
-- [`docs/参考边界与原创声明.md`](./docs/参考边界与原创声明.md)：公开发布的版权与来源边界。
+- [Learning path and topics](./docs/学习路线与知识点.md)
+- [Debugging and verification](./docs/调试与验证说明.md)
+- [AI collaboration record](./docs/AI协作开发记录.md)
+- [Compilation record for handwritten work](./docs/手写旧作编译记录.md)
+- [Source boundaries and originality statement](./docs/参考边界与原创声明.md)
 
-## 构建运行
+## Build and run
 
-环境要求：
+Requirements: a C++17 compiler such as Visual Studio 2022 / MSVC, and CMake 3.16 or later.
 
-- 支持 C++17 的编译器，例如 Visual Studio 2022 / MSVC。
-- CMake 3.16 或更高版本。
-
-顶层 CMake 默认构建全部 `＊` 复现示例与 `^` 扩展示例。无后缀旧作作为历史练习展示并单独记录编译尝试结果；其中已识别的一处编译 bug 做了明确记录的最小修复。
+The top-level CMake configuration builds all `＊` recreations and `^` extensions by default. Unsuffixed historical exercises are presented separately with independent compilation records; one identified compilation bug received a documented minimal fix.
 
 ```powershell
 cmake -S . -B build
@@ -65,24 +60,22 @@ cmake --build build --config Debug
 ctest --test-dir build -C Debug --output-on-failure
 ```
 
-在 Windows 命令行中，字符 `^` 具有转义含义。为保留公开目录中的来源标识，CMake 会在构建目录生成三个仅用于编译的安全路径副本；公开源文件仍以 `^` 结尾目录为准。
+In Windows command lines, `^` is an escape character. CMake generates safe-path copies of the three extension directories in the build directory for compilation; the public source remains in the directories ending in `^`. GitHub Actions runs the build and CTest on Windows / MSVC for pushes to `main` and pull requests.
 
-仓库配置了 GitHub Actions，在向 `main` 推送或发起 Pull Request 时，自动在 Windows / MSVC 环境执行上述 CMake 构建与 CTest 验证步骤。
+## Recorded validation
 
-## 已完成验证
+On 2026-05-27, using Windows, Visual Studio 2022 / MSVC, C++17, and CMake:
 
-验证日期：2026-05-27。验证环境：Windows、Visual Studio 2022 / MSVC、C++17、CMake。
+- All 13 `＊` cases and three `^` examples built; all 16 automated tests passed.
+- The address-book demo covered adding, editing, searching, deleting, and clearing; the employee manager covered file save/load, editing, deletion, and display.
+- `案例-测试结果统计^` reported five cases, four passes, one failure, and an 80.0% pass rate.
+- All 34 unsuffixed handwritten sources were organized. In addition to UTF-8 conversion and directory organization, a missing loop-closing brace in `代码案例/案例-猜数字/源.cpp` was added with Codex assistance.
+- After the fix, all 34 compiled independently under MSVC / C++17.
 
-- 13 个 `＊` 案例与 3 个 `^` 示例全部构建成功，16 项自动运行测试全部通过。
-- 通讯录演示流程覆盖添加、修改、查找、删除与清空；职工管理演示流程覆盖文件保存/读取、修改、删除与显示。
-- `案例-测试结果统计^` 输出 5 条用例、4 条通过、1 条失败、通过率 80.0%。
-- 34 份无后缀手写源码完成整理；除 UTF-8 编码转换和目录整理外，`代码案例/案例-猜数字/源.cpp` 在 Codex 协助下补充一个缺失的循环闭合大括号。
-- 修复后 34/34 份早期手写旧作均可在 MSVC / C++17 环境独立编译。
+## Source and collaboration boundaries
 
-## 来源边界与协作声明
-
-- 带 `＊` 的案例对应本人曾练习但现已丢失的代码，当前公开版本是在 Codex 协助下重新复现的实现。
-- 私人课程资料不作为本仓库公开成果发布；仓库不包含课程讲义、截图、压缩包、成品源码或其他第三方原件。
-- 未获得第三方学习资料公开再发布授权，因此复现过程不将第三方资料源码复制或改名发布。
-- 带 `^` 的示例为在整理过程中额外补充的主题练习。
-- `＊` 复现源码、`^` 扩展源码和文档在 Codex 协助下完成实现、调试验证和整理，使用者应自行阅读并能够解释代码行为。
+- `＊` cases recreate exercises previously practiced by the author but subsequently lost; the public implementations were recreated with Codex assistance.
+- Private course materials are not published as project results. The repository contains no course handouts, screenshots, archives, finished source, or other third-party originals.
+- Third-party learning materials were not authorized for republication; their source was not copied or renamed for publication.
+- `^` examples are additional exercises created during organization.
+- Codex assisted implementation, debugging, verification, and organization of recreations, extensions, and documentation. Users should read the code and be able to explain its behavior.
